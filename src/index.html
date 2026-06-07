@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudioShader</title>
+  
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script type="module" src="./main.js" defer></script>
+    <script type="module" src="./main2.js" defer></script>
+    <script type="module" src="./main3.js" defer></script>
+  </head>
+
+  <body  style="font-family: Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;">
+    <div class="offcanvas offcanvas-start show" data-bs-scroll="true" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel" data-bs-backdrop="false">
+      <!--<div class="btn-group-toggle" data-toggle="buttons"> -->
+        <input type="radio" class="btn-check" id="Install-check" autocomplete="off" name="menu" checked onchange="on_change(this)">
+        <label class="btn d-inline-flex align-items-center btn-lg shadow-none " for="Install-check">
+          <img src="./assets/plus.png" alt="Icon" width="24" height="24" class="me-2">
+          Install
+        </label>
+        <input type="radio" class="btn-check" id="Settings-check" autocomplete="off" name="menu" onchange="on_change(this)">
+        <label class="btn d-inline-flex align-items-center btn-lg shadow-none " for="Settings-check">
+          <img src="./assets/gear.png" alt="Icon" width="24" height="24" class="me-2">
+          Settings
+        </label>
+        <input type="radio" class="btn-check" id="Console-check" autocomplete="off" name="menu" onchange="on_change(this)">
+        <label class="btn d-inline-flex align-items-center btn-lg shadow-none" for="Console-check" >
+          <img src="./assets/console.png" alt="Icon" width="24" height="24" class="me-2">
+          Console
+        </label>
+      <!--</div>-->
+    </div>
+    <div id="main-content" style="position: absolute; margin-left: 400px; padding: 30px;">
+        <div id="install-view">
+          <h2 >Available</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="package-grid">
+          </div>
+        </div>
+
+    </div>
+    <div id="setting-content" style="position: relative; margin-left: 400px; padding: 30px; display: none;">
+      <h2 >Settings</h2>
+      <h5 class="card-title pb-3">Roblox Studio</h5>
+      <div class="row row-cols-1 row-cols-sm-2 g-4" id="setting-grid">
+          <div class="col">
+             <div class="card h-100 bg-dark text-light border-secondary p-3">
+              <a class="btn btn-primary stretched-link p-0 position-absolute" style="opacity: 0;top: 0; left: 0; width: 100%; height: 100%;" id="openbutton">Open roblox studio folder</a>
+              <div class="row align-items-left">
+                <div class="col-auto">
+                  <img src="./assets/folder.png" alt="Icon" width="60" height="60" class="me-2">
+                </div>
+                <div class="col">
+                  <h5 class="card-title">Open Studio Folder</h5>
+                  <p>Open Roblox Studio folder</p>
+                </div>
+              </div>
+             </div>
+          </div>
+          <div class="col">
+             <div class="card h-100 bg-dark text-light border-secondary p-3">
+              <div class="row align-items-left">
+                <div class="col-auto">
+                  <img src="./assets/delete.png" alt="Icon" width="60" height="60" class="me-2">
+                </div>
+                <div class="col">
+                  <h5 class="card-title">Delete</h5>
+                  <p>Delete shaders</p>
+                </div>
+              </div>
+             </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
